@@ -1,0 +1,10 @@
+const data = require("./area.json");
+
+console.log(
+  data.features.reduce((sampleArea, selectedArea) => {
+    if (sampleArea[selectedArea.properties.Area] <= 20) {
+      Math.max(sampleArea[selectedArea.properties.Area]);
+    } else Math.min(sampleArea[selectedArea.properties.Area]);
+    return selectedArea.properties.Area;
+  }, {})
+);
