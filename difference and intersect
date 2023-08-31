@@ -1,0 +1,23 @@
+var polygon1 = turf.polygon([[
+  [128, -26],
+  [141, -26],
+  [141, -21],
+  [128, -21],
+  [128, -26]
+]], {
+  "fill": "#F00",
+  "fill-opacity": 0.1
+});
+var polygon2 = turf.polygon([[
+  [126, -28],
+  [140, -28],
+  [140, -20],
+  [126, -20],
+  [126, -28]
+]], {
+  "fill": "#00F",
+  "fill-opacity": 0.1
+});
+
+var difference = turf.difference(polygon1, polygon2);
+var intersection = turf.intersect(polygon1, polygon2);
