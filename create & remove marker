@@ -1,0 +1,21 @@
+/*create array:*/
+var marker = new Array();
+
+/*Some Coordinates (here lat lon in json format)*/
+var items = [{"lat":"51.000","lon":"13.000"},{"lat":"52.000","lon":"13.010"},{"lat":"52.000","lon":"13.020"}];
+
+/*pushing items into array each by each and then add markers*/
+function itemWrap() {
+for(i=0;i<items.length;i++){
+    var LamMarker = new L.marker([items[i].lat, items[i].lon]);
+    marker.push(LamMarker);
+    map.addLayer(marker[i]);
+    }
+}
+
+/*Going through these marker-items again removing them*/
+function markerDelAgain() {
+for(i=0;i<marker.length;i++) {
+    map.removeLayer(marker[i]);
+    }  
+}
