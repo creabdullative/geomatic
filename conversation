@@ -1,0 +1,6 @@
+let ccWidget = new CoordinateConversion({
+  view: view
+});
+
+// Adds widget in the bottom left corner of the view
+view.ui.add(ccWidget, "bottom-left");
