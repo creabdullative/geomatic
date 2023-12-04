@@ -1,0 +1,10 @@
+var point = {
+  "type": "Feature",
+  "properties": {},
+  "geometry": {
+    "type": "Point",
+    "coordinates": [110, 40]
+  }
+}
+var geom = turf.getGeom(point)
+//={"type": "Point", "coordinates": [110, 40]}
